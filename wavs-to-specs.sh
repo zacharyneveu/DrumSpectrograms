@@ -17,9 +17,14 @@
 ################################################################################
 shopt -s globstar
 
-for file in ./**/*.wav;
+rm -r ./images
+cp -r ./audio ./images
+
+for file in ./images/**/*.wav;
 do
     outfile="${file%.*}.png"
     sox "$file" -n spectrogram -o "$outfile"
     echo "$file->$outfile"
 done
+
+rm -r images/**/*.wav
