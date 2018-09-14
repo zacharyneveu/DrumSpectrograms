@@ -13,6 +13,7 @@ cd ./Raw_Audio
 ./scrape.sh clap
 ./scrape.sh crash
 ./scrape.sh ride
+./scrape.sh shake
 
 cd ../
 ./wavs-to-specs.sh

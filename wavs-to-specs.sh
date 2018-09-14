@@ -28,3 +28,4 @@ do
 done
 
 rm -r images/**/*.wav
+rm -r images/**/*.WAV
