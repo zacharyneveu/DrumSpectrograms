@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rm -r images/*
-rm -r audio/*
+rm -r ./images/*
+rm -r ./audio/*
 
 cd ./Raw_Audio
 ./scrape.sh kick
@@ -18,3 +18,4 @@ cd ./Raw_Audio
 
 cd ../
 ./wavs-to-specs.sh
+./divide.sh 60 20 20
