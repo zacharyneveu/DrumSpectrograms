@@ -23,7 +23,7 @@ cp -r ./audio ./images
 for file in ./images/**/*.wav;
 do
     outfile="${file%.*}.png"
-    sox "$file" -n spectrogram -o "$outfile"
+    sox "$file" -n spectrogram -o "$outfile" -r -h -d 1
     echo "$file->$outfile"
 done
 

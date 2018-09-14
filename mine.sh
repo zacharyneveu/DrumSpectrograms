@@ -14,6 +14,7 @@ cd ./Raw_Audio
 ./scrape.sh crash
 ./scrape.sh ride
 ./scrape.sh shake
+./scrape.sh cymbal
 
 cd ../
 ./wavs-to-specs.sh
