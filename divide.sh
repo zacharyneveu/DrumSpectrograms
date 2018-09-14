@@ -16,7 +16,7 @@ mkdir ./divided/train
 mkdir ./divided/valid
 mkdir ./divided/test
 
-cd ./audio
+cd ./images
 
 for dir in ./*/
 do
