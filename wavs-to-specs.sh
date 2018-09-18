@@ -19,11 +19,13 @@ shopt -s globstar
 
 rm -r ./images
 cp -r ./audio ./images
+img_width=299
+img_height=299
 
 for file in ./images/**/*.wav;
 do
     outfile="${file%.*}.png"
-    sox "$file" -n spectrogram -o "$outfile" -r -h -d 1
+    sox "$file" -n spectrogram -y $img_height -x $img_width -o "$outfile" -r -h
     echo "$file->$outfile"
 done
 

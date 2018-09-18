@@ -1,21 +1,25 @@
 #!/bin/bash
 
+mkdir ./images/
+mkdir ./audio/
+
 rm -r ./images/*
 rm -r ./audio/*
 
+types=( kick snare hat tom perc bell clap crash ride shake cymbal )
+
 cd ./Raw_Audio
-./scrape.sh kick
-./scrape.sh snare
-./scrape.sh hat
-./scrape.sh tom
-./scrape.sh perc
-./scrape.sh bell
-./scrape.sh clap
-./scrape.sh crash
-./scrape.sh ride
-./scrape.sh shake
-./scrape.sh cymbal
+for type in "${types[@]}"
+do
+	./scrape.sh $type
+done
 
 cd ../
+./to_mono.sh
 ./wavs-to-specs.sh
 ./divide.sh 60 20 20
+
+for type in "${types[@]}"
+do
+	./avg_img.sh $type
+done
