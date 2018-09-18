@@ -2,3 +2,6 @@
 divided/
 audio/
 images/
+
+Raw_Audio/**/*.jpg
+Raw_Audio/**/*.png
