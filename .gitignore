@@ -2,6 +2,7 @@
 divided/
 audio/
 images/
+averages/
 
 Raw_Audio/**/*.jpg
 Raw_Audio/**/*.png

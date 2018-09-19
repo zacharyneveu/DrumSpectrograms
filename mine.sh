@@ -6,7 +6,7 @@ mkdir ./audio/
 rm -r ./images/*
 rm -r ./audio/*
 
-types=( kick snare hat tom perc bell clap crash ride shake cymbal )
+types=( kick snare rim hat tom perc bell clap crash ride shake cymbal )
 
 cd ./Raw_Audio
 for type in "${types[@]}"
